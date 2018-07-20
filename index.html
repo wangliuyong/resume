@@ -76,18 +76,51 @@
                 </a>
             </footer>
         </div>
-        <a class="button" href="#">下载PDF简历</a>
-        <p></p>
+        <p class="downloadResumeWrapper">
+            <a class="button" href="./source/myResume.pdf" download target="_blank">下载PDF简历</a>
+        </p>
+        <p class="selfIntroduce ">王刘永，安徽科技学院建筑学院大四学生<br>一生浪荡不羁</p>
     </main>
-    <section>
+    <section class="skills">
         <h2>我的技能</h2>
-        <ol>
-            <li>HTML5 &amp; CSS3</li>
-            <li>JavaScript</li>
-            <li>JQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML5 &amp; CSS3</h3>
+                <!--第二种方法。给每个li添加div然后padding-right:20px;-->
+                <div class="progressBar">
+                    <div class="progres" style="width:80%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progres" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JQuery</h3>
+                <div class="progressBar">
+                    <div class="progres" style="width:90%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="progressBar">
+                    <div class="progres" style="width:60%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React</h3>
+                <div class="progressBar">
+                    <div class="progres" style="width:60%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <div class="progressBar">
+                    <div class="progres" style="width:88%;"></div>
+                </div>
+            </li>
         </ol>
     </section>
     <section>

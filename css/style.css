@@ -1,5 +1,5 @@
 /*清除浏览器默认样式*/
-body,h1,p,ul {margin: 0;padding: 0;}
+body,h1,h2,h3,h4p,ul,ol {margin: 0;padding: 0;font-weight: normal;}
 
 body{background: #efefef}
 /*清除浮动*/
@@ -49,12 +49,13 @@ body{background: #efefef}
 .topNavBar nav>ul>li>a:hover{border-bottom: 3px solid rgb(232, 106, 107);}
 /*banner*/
 .banner{height: 515px;background: url(../img/background1.jpg) no-repeat center center;background-size: cover;}
-.banner .mask{height: 515px;background: rgba(0, 0, 0, 0.8);}
+.banner .mask{height: 515px;background: rgba(0, 0, 0, 0.7);}
 /*main*/
-.myCard{
+.myCard{ 
     max-width: 930px;
     margin: 0 auto;
     background: #FFf;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .myCard .welcome{
     display: inline-block;
@@ -124,4 +125,70 @@ hr{
     height: 30px;
     fill: #fff;
     vertical-align: top;/*垂直对齐方式*/
+}
+main{
+    margin-top:-368px;
+}
+main>.downloadResumeWrapper{text-align: center;margin-top: 36px;}
+main .downloadResumeWrapper>a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #9a9da2;
+    line-height: 16px;
+    padding: 21px 55px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: box-shadow 1s;/*添加过度效果*/
+}
+main .downloadResumeWrapper>a:hover {
+    -webkit-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+}
+.selfIntroduce{
+    max-width: 930px;
+    margin: 0 auto;
+    font-family: "楷体";
+    text-align: center;
+    line-height :1.8em;
+    margin-top: 44px;
+    margin-bottom: 40px;
+}
+/*skills*/
+section.skills >ol{
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 42px 50px 0;
+    box-sizing:border-box;
+    background: #FFf;
+    list-style: none;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    margin-top: 30px;
+}
+section.skills>ol>li{
+    float: left;
+    width: 48%;
+}
+section.skills>ol>li:nth-child(even) {float: right;}
+section.skills >h2 {
+    text-align: center;
+} 
+section.skills .progressBar{
+    height:5px;
+    background: #fae1e1;
+    border-radius: 3px;
+    margin-bottom: 40px;
+ }
+section.skills .progres{
+    width: 70%;
+    height: 100%;
+    background-color: #e8676b;
+    border-radius: 3px;
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    margin-bottom:5px;
 }
