@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js"></script>
+    <script src="//at.alicdn.com/t/font_755848_oilj4zz1x3.js"></script>
     <title>王刘永的个人简历</title>
 </head>
 <body>
-    <div class="topNavBar clearfix">
-        <a class="logo" href="#">
-            <span>Rs</span><span>card</span>
-        </a>
-        <nav>
-            <ul class="clearfix">
-                <li><a href="#">关于我</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其它</a></li>
-            </ul>
-        </nav>
-    </div>
     <div class="banner">
-
+        <div class="topNavBar">
+            <div class="inner clearfix">
+                <a class="logo" href="#">
+                <span>Rs</span><span>card</span>
+                </a>
+                <nav>
+                    <ul class="clearfix">
+                        <li><a href="#">关于我</a></li>
+                        <li><a href="#">技能</a></li>
+                        <li><a href="#">作品</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">日历</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">其它</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="mask"></div>
     </div>
     <main>
-        <div class="card">
-            <div class="picture"><img src="#" alt="头像"></div>
-            <div class="text">
+        <div class="myCard">
+            <div class="pictureAndText clearfix">
+                <div class="picture"><img src="./img/head.jpg" width="299px" height="347px" alt="头像"></div>
+                <div class="text">
                 <div class="summary">
-                    <span class="welcome">Hello</span>
+                    <span class="welcome">Hello<span class="triangle"></span></span>
                     <h1>王刘永</h1>
                     <p>前端开发工程师</p>
                     <hr>
@@ -47,16 +50,31 @@
                         <dt>邮箱</dt>
                         <dd>1355498705@qq.com</dd>
                     </dl>
-                </div>
-                <footer>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                </footer>
+                </div>  
             </div>
+            </div>
+            <footer>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+            </footer>
         </div>
         <a class="button" href="#">下载PDF简历</a>
         <p></p>
