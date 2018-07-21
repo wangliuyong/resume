@@ -1,6 +1,11 @@
 /*清除浏览器默认样式*/
 body,h1,h2,h3,h4p,ul,ol {margin: 0;padding: 0;font-weight: normal;}
-
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Open Sans";
+}
 body{background: #efefef}
 /*清除浮动*/
 .clearfix::after{
@@ -64,6 +69,8 @@ body{background: #efefef}
     background: #e8676b;
     margin-bottom: 26px;
     position: relative;
+    color: #fff;
+    font-weight: bold;
 }
 .triangle {
     position: absolute;
@@ -86,21 +93,35 @@ body{background: #efefef}
 }
 
 .myCard .pictureAndText {
-    padding: 57px 50px;
+    padding: 57px 50px 35px;
 }
 hr{
     height: 0;
     border: none;
     border-top: 1px solid #dedede;
 }
-.myCard h1{margin-bottom: 13px;}
-.myCard p{margin-bottom: 25px;}
+.myCard h1 {
+    margin-bottom: 13px;
+    color: #4C525E;
+    font-weight: bold;
+}
+.myCard p {
+    color: #ABAEB4;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
+}
 .myCard dl dt,
 .myCard dl dd{
     float: left;
     padding: 7.5px 0;
 }
-.myCard dl dt{width: 30%;color: #333;font-weight: bold;}
+.myCard dl dt {
+    width: 30%;
+    color: #5F5F5F;
+    font-weight: bold;
+}
 .myCard dl dd{width: 70%;margin-left: 0;color: #9da0a7;}
 /*引入iconfont*/
 .icon {
@@ -135,10 +156,11 @@ main .downloadResumeWrapper>a {
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
-    color: #9a9da2;
+    color: #464D59;
     line-height: 16px;
+    letter-spacing: 0.05em;
     padding: 21px 55px;
-    border: 1px solid #ccc;
+    border: 1px solid #464D59;
     border-radius: 3px;
     transition: box-shadow 1s;/*添加过度效果*/
 }
@@ -153,28 +175,36 @@ main .downloadResumeWrapper>a:hover {
     font-family: "楷体";
     text-align: center;
     line-height :1.8em;
+    letter-spacing: .2rem;
     margin-top: 44px;
     margin-bottom: 40px;
 }
 /*skills*/
-section.skills >ol{
+section.skills,
+section.Portfolio {
     max-width: 930px;
     margin: 0 auto;
+    margin-top: 79px;
+}
+section.skills >ol{
+    margin-top: 33px;
     padding: 42px 50px 0;
-    box-sizing:border-box;
     background: #FFf;
     list-style: none;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    margin-top: 30px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+   
 }
 section.skills>ol>li{
     float: left;
     width: 48%;
 }
 section.skills>ol>li:nth-child(even) {float: right;}
-section.skills >h2 {
+section.skills >h2,
+section.Portfolio>h2 {
     text-align: center;
-} 
+    color: #4C525E;
+    font-weight: bold;
+}
 section.skills .progressBar{
     height:5px;
     background: #fae1e1;
@@ -191,4 +221,47 @@ section.skills h3{
     font-size: 14px;
     line-height: 1.1;
     margin-bottom:5px;
+    color: #BCBFC3;
+}
+section.Portfolio{text-align:center;margin-bottom: 100px;}
+section.Portfolio nav{display:inline-block;vertical-align:top;text-align: center;}
+section.Portfolio nav > ul {margin:41px 0 16px;display: inline-block;vertical-align:top;list-style: none;}
+section.Portfolio nav>ul>li {
+    font-family: Kozuka Gothic Pr6N B;
+    cursor: pointer;
+    float: left;
+    margin-left: 30px;
+    color: #4C525E;
+    font-weight: 600;
+}
+section.Portfolio nav>ul>li:first-child{margin-left: 0;}
+div.bar {height: 5px;background: #fff;border-radius: 2px;}
+div.bar>.barInner {
+    transition-duration: 0.5s;
+    height: 100%;
+    background: #e8676b;
+    width: 10%;
+    border-radius: 2px;
+}
+
+section.Portfolio > nav .bar.state-1 .barInner{
+    margin-left:0;
+    width: 35px;
+} 
+section.Portfolio > nav .bar.state-2 .barInner{
+    margin-left: 60px;
+    width: 98px;
+}
+section.Portfolio > nav .bar.state-3 .barInner{
+    margin-left: 184px;
+    width: 35px;
+}
+/*jobs*/
+section.Portfolio .jobs{
+    position: relative;
+    margin-top: 30px;
+}
+section.Portfolio .jobs div{
+    position: absolute;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
