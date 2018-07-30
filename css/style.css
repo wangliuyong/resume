@@ -7,20 +7,39 @@ h4 {
     font-family: "Open Sans";
 }
 body{background: #efefef}
+
+
+.siteWelcome {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #c7c6c7;
+    justify-content: center;
+    align-items: center;
+}
+.siteWelcome.active{
+    display: flex;
+}
+
+
+
 /*清除浮动*/
 .clearfix::after{
     content:'';
     display: block;
     clear: both;
 }
-/*logo样式*/
+/*navBar*/
 .topNavBar{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 23px 0;
-    background:#fff;
 }
 .topNavBar>.inner{padding: 0 16px;}
 .logo{font-family: "Arial Black";font-size:24px;}
