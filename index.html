@@ -152,7 +152,9 @@
     </section>
     <script>
         var load =document.getElementById('siteWelcome');
-        load.classList.remove('active');
+        setTimeout(function(){
+            load.classList.remove("active");
+        },3000);
     </script>
     <script src="./js/main.js"></script>
 </body>
