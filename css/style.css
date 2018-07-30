@@ -1,5 +1,6 @@
 /*清除浏览器默认样式*/
 body,h1,h2,h3,h4p,ul,ol {margin: 0;padding: 0;font-weight: normal;}
+ul{list-style: none;}
 h1,
 h2,
 h3,
@@ -16,7 +17,7 @@ body{background: #efefef}
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background: #c7c6c7;
     justify-content: center;
     align-items: center;
@@ -40,6 +41,16 @@ body{background: #efefef}
     left: 0;
     width: 100%;
     padding: 23px 0;
+    z-index: 1;
+    color: #c7c6c7;
+}
+.topNavBar.sticky{
+    background:#fff;
+    padding: 10px 0;
+    transition: all 0.5s; 
+    color: #3d4451;
+    box-shadow : 0 1px 6px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.24);
 }
 .topNavBar>.inner{padding: 0 16px;}
 .logo{font-family: "Arial Black";font-size:24px;}
@@ -48,6 +59,7 @@ body{background: #efefef}
 .topNavBar a{
     float: left;
     text-decoration: none;
+    color: inherit;
 }
 .topNavBar nav>ul{
     float: right;
@@ -59,10 +71,11 @@ body{background: #efefef}
     margin-left: 17px;
     margin-right: 17px;
     list-style: none;
+    position: relative;
 }
 .topNavBar nav>ul>li>a{
     display: block;
-    color: #c7c6c7;
+    color: inherit;
     font-weight: bold;
     font-size: 13px;
     text-decoration: none;
@@ -70,7 +83,53 @@ body{background: #efefef}
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
 }
-.topNavBar nav>ul>li>a:hover{border-bottom: 3px solid rgb(232, 106, 107);}
+nav>ul>li.tiggerSubMenu.active>a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 0.5px;
+    background: #e8676b;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    animation: slideBar 0.3s linear;
+}
+
+@keyframes slideBar{
+    0%{
+        width:0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+nav>ul>li.tiggerSubMenu>ul.subMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background: #fff;
+    color: #3d4451;
+    margin-top: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+    animation: slideSubmenu 0.3s linear;
+}
+nav>ul>li.tiggerSubMenu.active>ul.subMenu{display: block;}
+nav ul.subMenu>li{
+    white-space: nowrap;
+    padding: 10px 20px;
+}
+@keyframes slideSubmenu{
+    0%{
+        margin-right: 100%;
+    }
+    100%{
+        margin-right:0;
+    }
+}
 /*banner*/
 .banner{height: 515px;background: url(../img/background1.jpg) no-repeat center center;background-size: cover;}
 .banner .mask{height: 515px;background: rgba(0, 0, 0, 0.7);}

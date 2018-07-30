@@ -15,24 +15,41 @@
     <title>王刘永的个人简历</title>
 </head>
 <body>
+    <!--loading-->
     <div id="siteWelcome" class="siteWelcome active">
         <div class="loading"></div>
     </div>
+ 
+
     <div class="banner">
-        <div class="topNavBar">
+        <div id="navBar" class="topNavBar">
             <div class="inner clearfix">
                 <a class="logo" href="#">
                 <span>Rs</span><span>card</span>
                 </a>
                 <nav>
                     <ul class="clearfix">
-                        <li><a href="#">关于我</a></li>
-                        <li><a href="#">技能</a></li>
-                        <li><a href="#">作品</a></li>
-                        <li><a href="#">博客</a></li>
-                        <li><a href="#">日历</a></li>
-                        <li><a href="#">联系方式</a></li>
-                        <li><a href="#">其它</a></li>
+                        <li class="tiggerSubMenu"><a href="#">关于我</a></li>
+                        <li class="tiggerSubMenu"><a href="#">技能</a></li>
+                        <li class="tiggerSubMenu">
+                            <a  href="#">作品</a>
+                            <ul class="subMenu">
+                                <li>作品一</li>
+                                <li>作品二</li>
+                                <li>作品三</li>
+                            </ul>
+                        </li>
+                        <li class="tiggerSubMenu"><a href="#">博客</a></li>
+                        <li class="tiggerSubMenu"><a href="#">日历</a></li>
+                        <li class="tiggerSubMenu"><a href="#">联系方式</a></li>
+                        <li class="tiggerSubMenu">
+                            <a href="#">其它</a>
+                            <ul class="subMenu">
+                                <li>作品一</li>
+                                <li>作品二</li>
+                                <li>作品三</li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -154,8 +171,8 @@
         var load =document.getElementById('siteWelcome');
         setTimeout(function(){
             load.classList.remove("active");
-        },3000);
+        },0);
     </script>
     <script src="./js/main.js"></script>
 </body>
-</html>
+</html> 
