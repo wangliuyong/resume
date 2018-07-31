@@ -65,7 +65,7 @@
         </div>
         <div class="mask"></div>
     </div>
-    <main id="About">
+    <main sign-y id="About">
         <div class="myCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
@@ -121,7 +121,7 @@
         <p class="selfIntroduce ">王刘永，xxx大学xxx专业在读，本科毕业于xxxx,我在校内获得过xxx…….安徽科技学院建筑学院大四学生
             <br>一生浪荡不羁</p>
     </main>
-    <section id="Skills" class="skills">
+    <section sign-y id="Skills" class="skills">
         <h2>我的技能</h2>
         <ol class="clearfix">
             <li>
@@ -162,38 +162,41 @@
                 </div>
             </li>
         </ol>
-        </sectionid>
-        <section id="Portfolio" class="Portfolio">
-            <h2>作品集</h2>
-            <nav>
-                <ul>
-                    <li id="PortfolioAll">所有</li>
-                    <li id="PortfolioNative">原生Js &amp; css</liid>
-                        <li id="PortfolioFramework">框架</li>
-                </ul>
-                <div id="PortfolioBar" class="bar state-1">
-                    <div class="barInner"></div>
-                </div>
-            </nav>
-            <div class="jobs" style="height: 576px;">
-                <div class="big" style="top:0;left:0">
-                    <img src="./img/1.jpg" alt="作品1">
-                </div>
-                <div class="small1" style="top:0;left:634px">
-                    <img src="./img/2.jpg" alt="作品2">
-                </div>
-                <div class="small2" style="top:298px;left:634px">
-                    <img src="./img/3.jpg" alt="作品3">
-                </div>
+    </section>
+    <section sign-y id="Portfolio" class="Portfolio">
+        <h2>作品集</h2>
+        <nav>
+            <ul>
+                <li id="PortfolioAll">所有</li>
+                <li id="PortfolioNative">原生Js &amp; css</liid>
+                    <li id="PortfolioFramework">框架</li>
+            </ul>
+            <div id="PortfolioBar" class="bar state-1">
+                <div class="barInner"></div>
             </div>
-        </section>
-        <script>
-            var load = document.getElementById('siteWelcome');
-            setTimeout(function () {
-                load.classList.remove("active");
-            }, 1000);
-        </script>
-        <script src="./js/main.js"></script>
+        </nav>
+        <div class="jobs" style="height: 576px;">
+            <div class="big" style="top:0;left:0">
+                <img src="./img/1.jpg" alt="作品1">
+            </div>
+            <div class="small1" style="top:0;left:634px">
+                <img src="./img/2.jpg" alt="作品2">
+            </div>
+            <div class="small2" style="top:298px;left:634px">
+                <img src="./img/3.jpg" alt="作品3">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var load = document.getElementById('siteWelcome');
+        setTimeout(function () {
+            load.classList.remove("active");
+        }, 500);
+    </script>
+    <script src="./js/main.js"></script>
+
 </body>
 
 </html>

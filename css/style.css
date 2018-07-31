@@ -123,7 +123,20 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-nav>ul>li.tiggerSubMenu.active>a::after {
+.topNavBar nav>ul>li.highlight>a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 0.5px;
+    background: #e8676b;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    animation: slideBar 0.3s linear;
+}
+
+.topNavBar nav>ul>li.active>a::after {
     content: "";
     display: block;
     width: 100%;
@@ -173,6 +186,15 @@ nav ul.subMenu>li {
     100% {
         margin-right: 0;
     }
+}
+
+[sign-y] {
+    transform: translateY(50px);
+    transition: all 0.8s;
+}
+
+[sign-y].slideInto {
+    transform: translateY(0);
 }
 
 /*banner*/

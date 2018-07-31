@@ -1,5 +1,5 @@
-//滚动时给导航栏添加渐变的背景
 window.onscroll = function() {
+  //滚动后给导航栏添加背景
   //console.log(window.scrollY);
   var navBar = document.getElementById("navBar");
   if (window.scrollY > 0) {
@@ -7,7 +7,36 @@ window.onscroll = function() {
   } else {
     navBar.classList.remove("sticky");
   }
+  slideUp();
 };
+window.setTimeout(function() {
+  slideUp();
+}, 100);
+function slideUp() {
+  //高亮导航条
+  let slideTag = document.querySelectorAll("[sign-y]");
+  let minIndex = 0;
+  for (let i = 0; i < slideTag.length; i++) {
+    if (
+      Math.abs(slideTag[i].offsetTop - window.scrollY) <
+      Math.abs(slideTag[minIndex].offsetTop - window.scrollY)
+    ) {
+      minIndex = i;
+    }
+  }
+
+  slideTag[minIndex].classList.add("slideInto");
+
+  let id = slideTag[minIndex].id;
+  let a = document.querySelector('[href="#' + id + '"]');
+
+  let li = a.parentNode.parentNode.children;
+  for (let i = 0; i < li.length; i++) {
+    li[i].classList.remove("highlight");
+  }
+  a.parentNode.classList.add("highlight");
+}
+
 //鼠标进入显示子菜单，离开时隐藏子菜单
 //let li = document.getElementsByClassName('tiggerSubMenu');
 let navLi = document.querySelectorAll("div.topNavBar nav>ul>li");
@@ -63,7 +92,7 @@ for (let i = 0; i < navLi.length; i++) {
       }
     }, t);
     */
-    /*************tween动画库******************************************************************/
+    /*************tween缓动函数库************************************************************/
     // Setup the animation loop.
     let t = Math.abs((S / 100) * 300);
     if (t > 500) {
