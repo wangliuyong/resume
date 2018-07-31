@@ -9,12 +9,16 @@ window.onscroll = function() {
   }
   slideUp();
 };
+
+//滑动效果
 window.setTimeout(function() {
   slideUp();
 }, 100);
 function slideUp() {
   //高亮导航条
   let slideTag = document.querySelectorAll("[sign-y]");
+  let inner = document.querySelector(".inner");
+  inner.classList.add("active");
   let minIndex = 0;
   for (let i = 0; i < slideTag.length; i++) {
     if (

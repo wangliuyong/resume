@@ -76,6 +76,12 @@ body {
 
 .topNavBar>.inner {
     padding: 0 16px;
+    transform: translateY(-55px);
+    transition: all 0.5s;
+}
+
+.topNavBar>.inner.active {
+    transform: translateY(0);
 }
 
 .logo {
@@ -409,6 +415,7 @@ section.skills .progressBar {
     background: #fae1e1;
     border-radius: 3px;
     margin-bottom: 40px;
+    overflow: hidden;
 }
 
 section.skills .progres {
@@ -416,6 +423,17 @@ section.skills .progres {
     height: 100%;
     background-color: #e8676b;
     border-radius: 3px;
+}
+
+/*技能条动画*/
+
+section.skills .progres {
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+section.skills.slideInto .progres {
+    transform: translateX(0);
 }
 
 section.skills h3 {
