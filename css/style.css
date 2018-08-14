@@ -425,6 +425,7 @@ section.skills .progres {
     border-radius: 3px;
 }
 
+
 /*技能条动画*/
 
 section.skills .progres {
@@ -443,12 +444,22 @@ section.skills h3 {
     color: #BCBFC3;
 }
 
+
+
+
 section.Portfolio {
     text-align: center;
     margin-bottom: 100px;
 }
 
-section.Portfolio nav {
+section.Portfolio h2{margin-bottom: 42px;}
+/*轮播图*/
+.swiper-container {
+    width: 668px;
+    height: 501px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/* section.Portfolio nav {
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -504,7 +515,7 @@ section.Portfolio>nav .bar.state-3 .barInner {
 }
 
 /*jobs*/
-
+/* 
 section.Portfolio .jobs {
     position: relative;
     margin-top: 30px;
@@ -513,4 +524,4 @@ section.Portfolio .jobs {
 section.Portfolio .jobs div {
     position: absolute;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-}
+} */ 

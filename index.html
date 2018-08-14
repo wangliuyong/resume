@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>王刘永的个人简历</title>
     <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_755848_oilj4zz1x3.js"></script>
 </head>
 
@@ -121,6 +123,8 @@
         <p class="selfIntroduce ">王刘永，xxx大学xxx专业在读，本科毕业于xxxx,我在校内获得过xxx…….安徽科技学院建筑学院大四学生
             <br>一生浪荡不羁</p>
     </main>
+
+
     <section sign-y id="Skills" class="skills">
         <h2>我的技能</h2>
         <ol class="clearfix">
@@ -165,16 +169,19 @@
     </section>
     <section sign-y id="Portfolio" class="Portfolio">
         <h2>作品集</h2>
-        <nav>
+        <!--   <nav>
             <ul>
                 <li id="PortfolioAll">所有</li>
-                <li id="PortfolioNative">原生Js &amp; css</liid>
-                    <li id="PortfolioFramework">框架</li>
+                <li id="PortfolioNative">原生Js &amp; css</li>
+                <li id="PortfolioFramework">框架</li>
             </ul>
             <div id="PortfolioBar" class="bar state-1">
                 <div class="barInner"></div>
             </div>
         </nav>
+
+        
+
         <div class="jobs" style="height: 576px;">
             <div class="big" style="top:0;left:0">
                 <img src="./img/1.jpg" alt="作品1">
@@ -185,7 +192,59 @@
             <div class="small2" style="top:298px;left:634px">
                 <img src="./img/3.jpg" alt="作品3">
             </div>
+        </div> -->
+
+        <!--轮播图-->
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <img class="swiper-slide" src="./img/apple-slide.png">
+                <img class="swiper-slide" src="./img/canvas.jpg">
+                <img class="swiper-slide" src='./img/nav.png'>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <script>
+
+            console.log(window.Swiper)
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+
+            })
+        </script>
+
+
+
+
+
+
+
+
+
     </section>
 
 
