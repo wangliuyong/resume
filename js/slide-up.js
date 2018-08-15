@@ -1,4 +1,4 @@
-!function(){
+!function () {
   window.addEventListener('scroll', () => {
     //高亮导航条
     let slideTag = document.querySelectorAll("[sign-y]");

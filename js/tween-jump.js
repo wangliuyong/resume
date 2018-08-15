@@ -1,5 +1,5 @@
 !function() {
-  navLi = document.querySelectorAll("div.topNavBar nav>ul>li");
+  var navLi = document.querySelectorAll("div.topNavBar nav>ul>li");
   //跳转
   for (let i = 0; i < navLi.length; i++) {
     navLi[i].onclick = function(event) {

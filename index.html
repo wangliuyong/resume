@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/loading.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    
+
 </head>
 
 <body>
@@ -194,23 +194,25 @@
 
         <!--轮播图-->
 
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <img class="swiper-slide" src="./img/apple-slide.png">
-                <img class="swiper-slide" src="./img/canvas.jpg">
-                <img class="swiper-slide" src='./img/nav.png'>
+        <div id="slide-wrap">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img class="swiper-slide" src="./img/apple-slide.png">
+                    <img class="swiper-slide" src="./img/canvas.jpg">
+                    <img class="swiper-slide" src='./img/nav.png'>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
 
     </section>
 
