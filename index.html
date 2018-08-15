@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./css/loading.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="//at.alicdn.com/t/font_755848_oilj4zz1x3.js"></script>
+    
 </head>
 
 <body>
@@ -214,47 +212,18 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <script>
-
-            console.log(window.Swiper)
-            var mySwiper = new Swiper('.swiper-container', {
-                // Optional parameters
-
-                loop: true,
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-
-            })
-        </script>
-
-
-
-
-
-
-
-
-
     </section>
 
+    <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="//at.alicdn.com/t/font_755848_oilj4zz1x3.js"></script>
 
-    <script>
-        var load = document.getElementById('siteWelcome');
-        setTimeout(function () {
-            load.classList.remove("active");
-        }, 500);
-    </script>
-    <script src="./js/main.js"></script>
+    <script src="./js/loding.js"></script>
+    <script src="./js/tween-jump.js"></script>
+    <script src="./js/init-swiper.js"></script>
+    <script src="./js/stick-navBar.js"></script>
+    <script src="./js/slide-up.js"></script>
+    <script src="./js/tigger-subMenu.js"></script>
 
 </body>
 
