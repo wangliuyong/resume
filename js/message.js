@@ -1,5 +1,12 @@
 !function () {
     var model = {
+        //初始化数据库
+        initAV: function() {
+            //初始化leancloud
+            var APP_ID = "uIYIoLNwz3v4F1P0wIMobPvU-gzGzoHsz";
+            var APP_KEY = "Kcm7BYxMpwGKtWHXBJW2ymVs";
+            AV.init({ appId: APP_ID, appKey: APP_KEY });
+        },
         //获取数据
         fetch: function () {
             //从云获取历史留言
@@ -23,21 +30,17 @@
 
 
     var controller = {
-        view: null, messageBoard: null, myForm: null,
+        view: null, messageBoard: null, myForm: null,model:null,
         init: function () {
             this.view = view;
             this.messageBoard = document.querySelector("#historyMessage");
             this.myForm = this.view.querySelector("#messageForm");
-            this.initAV();
+            this.model=model;
+            this.model.initAV();
             this.loadMessage();
             this.bindEvent();
         },
-        initAV: function() {
-            //初始化leancloud
-            var APP_ID = "uIYIoLNwz3v4F1P0wIMobPvU-gzGzoHsz";
-            var APP_KEY = "Kcm7BYxMpwGKtWHXBJW2ymVs";
-            AV.init({ appId: APP_ID, appKey: APP_KEY });
-        },
+
         loadMessage: function () {
 
             model.fetch().then((messages) => {
@@ -49,7 +52,8 @@
                     let content = items.content;
                     let li = document.createElement("li");
                     li.innerText = `${name}:${content}`;
-                    this.messageBoard.appendChild(li);
+                    var theFirstChild = controller.messageBoard.firstChild;
+                    controller.messageBoard.insertBefore(li,theFirstChild);
                 });
                 return AV.Object.saveAll(messages);
             }).then(function (messages) {
@@ -77,14 +81,16 @@
             } else {
                 let li = document.createElement("li");
                 li.innerText = `${name}:${content}`;
-                controller.messageBoard.appendChild(li);
-
-                model.save(name, content).then(
-                    function (object) {
-                        console.log("存入一条数据");
-                        console.log(content);
+                var theFirstChild = controller.messageBoard.firstChild;
+                controller.messageBoard.insertBefore(li,theFirstChild);
+                this.model.save(name, content).then(
+                    ()=> {
+                        this.myForm.querySelector('input[name="content"]').value='';
+                        this.myForm.querySelector('input[name="name"]').value='';
                     },
-                    () => { }
+                    () => { 
+                        console.log('留言失败')
+                    }
                 );
             }
             
