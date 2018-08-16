@@ -43,7 +43,7 @@
                             </ul>
                         </li>
                         <li class="tiggerSubMenu">
-                            <a href="#">博客</a>
+                            <a href="#LeaveMessage">留言</a>
                         </li>
                         <li class="tiggerSubMenu">
                             <a href="#">日历</a>
@@ -221,16 +221,43 @@
 
     </section>
 
+    <section id="LeaveMessage">
+        <h2>留言板</h2>
+        <form id='messageForm' action="#" method="post">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+            <label for="">内容</label>
+            <input type="text" name="content" id="content">
+            <input type="submit" value="提交">
+        </form>
+        <label for="historyMessage">历史留言</label>
+        <ul id="historyMessage" class="message-board"></ul>
+    </section>
+
+    
+
+
+    <script src="./js/loding.js"></script>
     <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_755848_oilj4zz1x3.js"></script>
 
-    <script src="./js/loding.js"></script>
+    <!-- 存储服务 -->
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <!-- 实时消息服务 -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script> -->
+    <!--使用存储服务的 LiveQuery 功能-->
+    <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-live-query-min.js"></script> -->
+    <script src="./js/leancloud.js"></script>
+
+    <!--模块化-->
+    
     <script src="./js/tween-jump.js"></script>
     <script src="./js/init-swiper.js"></script>
     <script src="./js/stick-navBar.js"></script>
     <script src="./js/slide-up.js"></script>
     <script src="./js/tigger-subMenu.js"></script>
+    <script src="./js/message.js"></script>
     
 
 </body>

@@ -6,7 +6,7 @@
       //let liId = event.target.href;浏览器会默认添加域名http://event
       event.preventDefault(); //阻止目标默认事件和行为
 
-      let targetId = event.target.getAttribute("href"); //"#About".......
+      let targetId = event.target.getAttribute("href"); //"#About"
 
       let element = document.querySelector(targetId);
 

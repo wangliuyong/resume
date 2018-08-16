@@ -7,457 +7,455 @@ h3,
 h4p,
 ul,
 ol {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: "Open Sans";
+  font-family: "Open Sans";
 }
 
 body {
-    background: #efefef
+  background: #efefef;
 }
 
 /*loading*/
 
 .siteWelcome {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: #c7c6c7;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #c7c6c7;
+  justify-content: center;
+  align-items: center;
 }
 
 .siteWelcome.active {
-    display: flex;
+  display: flex;
 }
 
 /*清除浮动*/
 
 .clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /*navBar*/
 
 .topNavBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 23px 0;
-    z-index: 1;
-    color: #c7c6c7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 23px 0;
+  z-index: 1;
+  color: #c7c6c7;
 }
 
 .topNavBar.sticky {
-    background: #fff;
-    padding: 10px 0;
-    transition: all 0.8s;
-    color: #3d4451;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background: #fff;
+  padding: 10px 0;
+  transition: all 0.8s;
+  color: #3d4451;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
-.topNavBar>.inner {
-    padding: 0 16px;
-    transform: translateY(-55px);
-    transition: all 0.8s;
+.topNavBar > .inner {
+  padding: 0 16px;
+  transform: translateY(-55px);
+  transition: all 0.8s;
 }
 
-.topNavBar>.inner.active {
-    transform: translateY(0);
+.topNavBar > .inner.active {
+  transform: translateY(0);
 }
 
 .logo {
-    font-family: "Arial Black";
-    font-size: 24px;
+  font-family: "Arial Black";
+  font-size: 24px;
 }
 
-.topNavBar a>span:nth-child(1) {
-    margin-right: 4px;
-    color: rgb(232, 106, 107);
+.topNavBar a > span:nth-child(1) {
+  margin-right: 4px;
+  color: rgb(232, 106, 107);
 }
 
-.topNavBar a>span:nth-child(2) {
-    color: #9a9da2;
+.topNavBar a > span:nth-child(2) {
+  color: #9a9da2;
 }
 
 .topNavBar a {
-    float: left;
-    text-decoration: none;
-    color: inherit;
+  float: left;
+  text-decoration: none;
+  color: inherit;
 }
 
-.topNavBar nav>ul {
-    float: right;
-    padding-top: 2px;
-    padding-bottom: 2px;
+.topNavBar nav > ul {
+  float: right;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
-.topNavBar nav>ul>li {
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
-    list-style: none;
-    position: relative;
+.topNavBar nav > ul > li {
+  float: left;
+  margin-left: 17px;
+  margin-right: 17px;
+  list-style: none;
+  position: relative;
 }
 
-.topNavBar nav>ul>li>a {
-    display: block;
-    color: inherit;
-    font-weight: bold;
-    font-size: 13px;
-    text-decoration: none;
-    padding: 3px;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+.topNavBar nav > ul > li > a {
+  display: block;
+  color: inherit;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 3px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
-.topNavBar nav>ul>li.highlight>a::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 0.5px;
-    background: #e8676b;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    animation: slideBar 0.3s linear;
+.topNavBar nav > ul > li.highlight > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 0.5px;
+  background: #e8676b;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  animation: slideBar 0.3s linear;
 }
 
-.topNavBar nav>ul>li.active>a::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 0.5px;
-    background: #e8676b;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    animation: slideBar 0.3s linear;
+.topNavBar nav > ul > li.active > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 0.5px;
+  background: #e8676b;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  animation: slideBar 0.3s linear;
 }
 
 @keyframes slideBar {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
-nav>ul>li.tiggerSubMenu>ul.subMenu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-    background: #fff;
-    color: #3d4451;
-    margin-top: 3px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
-    animation: slideSubmenu 0.3s linear;
+nav > ul > li.tiggerSubMenu > ul.subMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background: #fff;
+  color: #3d4451;
+  margin-top: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+  animation: slideSubmenu 0.3s linear;
 }
 
-nav>ul>li.tiggerSubMenu.active>ul.subMenu {
-    display: block;
+nav > ul > li.tiggerSubMenu.active > ul.subMenu {
+  display: block;
 }
 
-nav ul.subMenu>li {
-    white-space: nowrap;
-    padding: 10px 20px;
+nav ul.subMenu > li {
+  white-space: nowrap;
+  padding: 10px 20px;
 }
 
 @keyframes slideSubmenu {
-    0% {
-        margin-right: 100%;
-    }
-    100% {
-        margin-right: 0;
-    }
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 0;
+  }
 }
 
 [sign-y] {
-    transform: translateY(100px);
-    transition: all 0.8s;
+  transform: translateY(100px);
+  transition: all 0.8s;
 }
 
 [sign-y].slideInto {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /*banner*/
 
 .banner {
-    height: 515px;
-    background: url(../img/background1.jpg) no-repeat center center;
-    background-size: cover;
+  height: 515px;
+  background: url(../img/background1.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 .banner .mask {
-    height: 515px;
-    background: rgba(0, 0, 0, 0.7);
+  height: 515px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /*main*/
 
 .myCard {
-    max-width: 930px;
-    margin: 0 auto;
-    background: #FFf;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  max-width: 930px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .myCard .welcome {
-    display: inline-block;
-    padding: 4.5px 15px;
-    line-height: 21px;
-    background: #e8676b;
-    margin-bottom: 26px;
-    position: relative;
-    color: #fff;
-    font-weight: bold;
+  display: inline-block;
+  padding: 4.5px 15px;
+  line-height: 21px;
+  background: #e8676b;
+  margin-bottom: 26px;
+  position: relative;
+  color: #fff;
+  font-weight: bold;
 }
 
 .triangle {
-    position: absolute;
-    left: 4px;
-    top: 100%;
-    display: block;
-    border: 8px solid transparent;
-    width: 0;
-    border-left-color: #e8676b;
-    border-top-width: 0;
-    border-right-width: 0;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+  display: block;
+  border: 8px solid transparent;
+  width: 0;
+  border-left-color: #e8676b;
+  border-top-width: 0;
+  border-right-width: 0;
 }
 
 .myCard .pictureAndText .picture {
-    float: left;
+  float: left;
 }
 
 .myCard .pictureAndText .text {
-    float: left;
-    margin-left: 65px;
-    width: 450px;
+  float: left;
+  margin-left: 65px;
+  width: 450px;
 }
 
 .myCard .pictureAndText {
-    padding: 57px 50px 35px;
+  padding: 57px 50px 35px;
 }
 
 hr {
-    height: 0;
-    border: none;
-    border-top: 1px solid #dedede;
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
 }
 
 .myCard h1 {
-    margin-bottom: 13px;
-    color: #4C525E;
-    font-weight: bold;
+  margin-bottom: 13px;
+  color: #4c525e;
+  font-weight: bold;
 }
 
 .myCard p {
-    color: #ABAEB4;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.1;
+  color: #abaeb4;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 .myCard dl dt,
 .myCard dl dd {
-    float: left;
-    padding: 7.5px 0;
+  float: left;
+  padding: 7.5px 0;
 }
 
 .myCard dl dt {
-    width: 30%;
-    color: #5F5F5F;
-    font-weight: bold;
+  width: 30%;
+  color: #5f5f5f;
+  font-weight: bold;
 }
 
 .myCard dl dd {
-    width: 70%;
-    margin-left: 0;
-    color: #9da0a7;
+  width: 70%;
+  margin-left: 0;
+  color: #9da0a7;
 }
 
 /*引入iconfont*/
 
 .icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
 
 .myCard footer {
-    background: #e8676b;
-    text-align: center;
+  background: #e8676b;
+  text-align: center;
 }
 
 .myCard footer a {
-    display: inline-block;
-    width: 40px;
-    padding: 5px 0;
-    text-decoration: none;
-    margin: 16px 20px;
-    border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  padding: 5px 0;
+  text-decoration: none;
+  margin: 16px 20px;
+  border-radius: 50%;
 }
 
 .myCard footer a:hover {
-    background: rgb(208, 92, 96);
+  background: rgb(208, 92, 96);
 }
 
 .myCard footer svg {
-    width: 30px;
-    height: 30px;
-    fill: #fff;
-    vertical-align: top;
-    /*垂直对齐方式*/
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  vertical-align: top;
+  /*垂直对齐方式*/
 }
 
 main {
-    margin-top: -368px;
+  margin-top: -368px;
 }
 
-main>.downloadResumeWrapper {
-    text-align: center;
-    margin-top: 36px;
+main > .downloadResumeWrapper {
+  text-align: center;
+  margin-top: 36px;
 }
 
-main .downloadResumeWrapper>a {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    color: #464D59;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    padding: 21px 55px;
-    border: 1px solid #464D59;
-    border-radius: 3px;
-    transition: box-shadow 1s;
-    /*添加过度效果*/
+main .downloadResumeWrapper > a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #464d59;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  padding: 21px 55px;
+  border: 1px solid #464d59;
+  border-radius: 3px;
+  transition: box-shadow 1s;
+  /*添加过度效果*/
 }
 
-main .downloadResumeWrapper>a:hover {
-    -webkit-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+main .downloadResumeWrapper > a:hover {
+  -webkit-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 23px -4px rgba(0, 0, 0, 0.75);
 }
 
 .selfIntroduce {
-    max-width: 930px;
-    margin: 0 auto;
-    font-family: "楷体";
-    text-align: center;
-    line-height: 1.8em;
-    letter-spacing: .2rem;
-    margin-top: 44px;
-    margin-bottom: 40px;
+  max-width: 930px;
+  margin: 0 auto;
+  font-family: "楷体";
+  text-align: center;
+  line-height: 1.8em;
+  letter-spacing: 0.2rem;
+  margin-top: 44px;
+  margin-bottom: 40px;
 }
 
 /*skills*/
 
 section.skills,
 section.Portfolio {
-    max-width: 930px;
-    margin: 0 auto;
-    margin-top: 79px;
+  max-width: 930px;
+  margin: 0 auto;
+  margin-top: 79px;
 }
 
-section.skills>ol {
-    margin-top: 33px;
-    padding: 42px 50px 0;
-    background: #FFf;
-    list-style: none;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+section.skills > ol {
+  margin-top: 33px;
+  padding: 42px 50px 0;
+  background: #fff;
+  list-style: none;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-section.skills>ol>li {
-    float: left;
-    width: 48%;
+section.skills > ol > li {
+  float: left;
+  width: 48%;
 }
 
-section.skills>ol>li:nth-child(even) {
-    float: right;
+section.skills > ol > li:nth-child(even) {
+  float: right;
 }
 
-section.skills>h2,
-section.Portfolio>h2 {
-    text-align: center;
-    color: #4C525E;
-    font-weight: bold;
+section.skills > h2,
+section.Portfolio > h2 {
+  text-align: center;
+  color: #4c525e;
+  font-weight: bold;
 }
 
 section.skills .progressBar {
-    height: 5px;
-    background: #fae1e1;
-    border-radius: 3px;
-    margin-bottom: 40px;
-    overflow: hidden;
+  height: 5px;
+  background: #fae1e1;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  overflow: hidden;
 }
 
 section.skills .progres {
-    width: 70%;
-    height: 100%;
-    background-color: #e8676b;
-    border-radius: 3px;
+  width: 70%;
+  height: 100%;
+  background-color: #e8676b;
+  border-radius: 3px;
 }
-
 
 /*技能条动画*/
 
 section.skills .progres {
-    transform: translateX(-100%);
-    transition: all 0.8s;
+  transform: translateX(-100%);
+  transition: all 0.8s;
 }
 
 section.skills.slideInto .progres {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 section.skills h3 {
-    font-size: 14px;
-    line-height: 1.1;
-    margin-bottom: 5px;
-    color: #BCBFC3;
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  color: #bcbfc3;
 }
-
-
-
 
 section.Portfolio {
-    text-align: center;
-    margin-bottom: 100px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
-section.Portfolio h2{margin-bottom: 42px;}
+section.Portfolio h2 {
+  margin-bottom: 42px;
+}
 /*轮播图*/
 .swiper-container {
-    width: 668px;
-    height: 501px;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 668px;
+  height: 501px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 /* section.Portfolio nav {
     display: inline-block;
@@ -524,4 +522,16 @@ section.Portfolio .jobs {
 section.Portfolio .jobs div {
     position: absolute;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-} */ 
+} */
+
+/*leaveMessage*/
+#LeaveMessage {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+#LeaveMessage h2 {
+  text-align: center;
+  color: #4c525e;
+  font-weight: bold;
+}
