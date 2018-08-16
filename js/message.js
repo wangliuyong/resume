@@ -1,3 +1,29 @@
+!function(){
+    var model={
+
+    }
+    
+    var view=document.querySelector('section#LeaveMessage')
+    
+    var controller={
+        view:null,
+
+        init:function(){
+            this.view=view;
+
+        }
+    }
+
+    controller.init();
+}.call()
+
+
+
+//初始化leancloud
+var APP_ID = 'uIYIoLNwz3v4F1P0wIMobPvU-gzGzoHsz';
+var APP_KEY = 'Kcm7BYxMpwGKtWHXBJW2ymVs';
+AV.init({ appId: APP_ID,appKey: APP_KEY});
+
 
 //存储留言到云
 var myForm=document.querySelector('#LeaveMessage');
