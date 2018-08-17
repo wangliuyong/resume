@@ -1,32 +1,8 @@
 !function () {
-    var model = {
-        //初始化数据库
-        initAV: function() {
-            //初始化leancloud
-            var APP_ID = "uIYIoLNwz3v4F1P0wIMobPvU-gzGzoHsz";
-            var APP_KEY = "Kcm7BYxMpwGKtWHXBJW2ymVs";
-            AV.init({ appId: APP_ID, appKey: APP_KEY });
-        },
-        //获取数据
-        fetch: function () {
-            //从云获取历史留言
-            var query = new AV.Query("message");
-            //注意这里，要用箭头函数。this内外指向一至。要不然里面就不饿能够用this，this指向花发生变化。
-            return query.find();
-        },
-        //存储数据
-        save: function (name,content) {
-            //创建message表
-            var xxx = AV.Object.extend("message");
-            //在message表中创建一行数据
-            var testObject = new xxx();
-            //数据的内容是 'content': content 保存
-            //如果保存成功执行consol
-            return testObject.save({ name: name, content: content })
-        }
-    }
+    var model = Model("message");
+    
 
-    var view = document.querySelector('section#LeaveMessage')
+    var view = window.view('section#LeaveMessage')
 
 
     var controller = {
@@ -36,7 +12,7 @@
             this.messageBoard = document.querySelector("#historyMessage");
             this.myForm = this.view.querySelector("#messageForm");
             this.model=model;
-            this.model.initAV();
+            this.model.init();
             this.loadMessage();
             this.bindEvent();
         },

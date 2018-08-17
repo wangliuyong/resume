@@ -1,6 +1,6 @@
 !function(){
 
-    var view=document.querySelector('#slide-wrap')
+    var view=window.view('#slide-wrap')
     var controler={
         view:null,
         init:function(view){
